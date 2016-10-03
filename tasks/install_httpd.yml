@@ -1,9 +1,10 @@
 --- 
 # These tasks install http and the php modules. 
 
-
  - set_fact:
-    - http_port: 80                                                                                                                           - max_clients: 200                                                                                                                      
+     http_port: 80
+     max_clients: 200                            
+
  # this was using yum: before but travis install didnt have yum
  # had to fix php to php5 and php-mysql to php5-mysql
  # and libsemanage-python and libselinux-python to python-all-dev
