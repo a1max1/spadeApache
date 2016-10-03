@@ -1,12 +1,14 @@
 --- 
 # These tasks install http and the php modules. 
  
+ # this was using yum: before but travis install didnt have yum
+ # had to fix php to php5 and php-mysql to php5-mysql
  - name: Install http and php etc 
    apt: name={{ item }} state=present 
    with_items: 
     - httpd 
     - php5 
-    - php-mysql 
+    - php5-mysql 
     - git 
     - libsemanage-python 
     - libselinux-python 
