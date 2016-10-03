@@ -9,6 +9,7 @@ before_install:
 install:
   # Install Ansible.
   - pip install ansible
+  - dnf install yum
 
   # Add ansible.cfg to pick up roles path  
   # added that line to create a quick and dirty ansible.cfg configuration file 
