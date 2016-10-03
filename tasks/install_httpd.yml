@@ -18,10 +18,12 @@
     - git 
     - python-all-dev 
 
- - name: write the apache config file                                                                                      
-   template: src=httpd.j2 dest=/etc/httpd/conf/httpd.conf                                           
-   notify:                                                                                                                 
-    - restart apache                                                                                                        
+#taking this out for now.  this was when we installed via httpd. 
+#not sure what it needs to be yet for when doing apache2
+# - name: write the apache config file                                                                                      
+ #  template: src=httpd.j2 dest=/etc/httpd/conf/httpd.conf                                           
+  # notify:                                                                                                                 
+   # - restart apache                                                                                                        
 
  - name: http service state 
    service: name=httpd state=started enabled=yes 
