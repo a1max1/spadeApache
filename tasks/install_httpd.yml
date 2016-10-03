@@ -3,6 +3,7 @@
  
  # this was using yum: before but travis install didnt have yum
  # had to fix php to php5 and php-mysql to php5-mysql
+ # and libsemanage-python and libselinux-python to python-all-dev
  - name: Install http and php etc 
    apt: name={{ item }} state=present 
    with_items: 
@@ -10,8 +11,7 @@
     - php5 
     - php5-mysql 
     - git 
-    - libsemanage-python 
-    - libselinux-python 
+    - python-all-dev 
 
  - name: write the apache config file                                                                                      
    template: src=httpd.j2 dest=/etc/httpd/conf/httpd.conf                                           
