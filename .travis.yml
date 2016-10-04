@@ -38,4 +38,6 @@ script:
   # Request a page via the web server, to make sure it's running and responds.
   - "curl http://localhost/"
 
-
+#added for galaxy integration
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
