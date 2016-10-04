@@ -32,7 +32,7 @@
 
  - name: Enable apache2 modules 
    command: a2enmod {{ item }} 
-   with_items: lamp.apache.modules 
+   with_items: {{ lamp.apache.modules }}
    notify: restart apache2 
 
 #taking this out for now.  this was when we installed via httpd. 
