@@ -40,5 +40,5 @@ script:
   - "curl http://localhost/"
 
 #added for galaxy integration
-#notifications:
- # webhooks: https://galaxy.ansible.com/api/v1/notifications/
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
