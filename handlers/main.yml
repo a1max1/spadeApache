@@ -1,4 +1,7 @@
 # handlers for spadeApache
 
- - name: restart apache                                                                                                  
-   service: name=httpd state=restarted                                                                                   
+ - name: restart apache  when using yum                                                                                 
+   service: name=httpd state=restarted               
+
+ - name: restart apache using apt-get
+   service: name=apache2 state=restarted 
