@@ -25,5 +25,6 @@
   # notify:                                                                                                                 
    # - restart apache                                                                                                        
 
- - name: http service state 
-   service: name=httpd state=started enabled=yes 
+#installing apache now so taking this out
+# - name: http service state 
+ #  service: name=httpd state=started enabled=yes 
