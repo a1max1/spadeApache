@@ -28,5 +28,5 @@ example of how to use the role
 
 Author Information
 ------------------
-Ace of Spades
+Ace of Spade
 
