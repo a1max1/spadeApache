@@ -1,7 +1,7 @@
 galaxy_info:
-  author: your name
-  description: your description
-  company: your company (optional)
+  author: a1max1
+  description: the ace of spades
+  company: spade
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
@@ -174,9 +174,9 @@ galaxy_info:
   #  versions:
   #  - all
   #  - any
-  #- name: Debian
-  #  versions:
-  #  - all
+  - name: Debian
+    versions:
+    - all
   #  - etch
   #  - jessie
   #  - lenny
@@ -185,7 +185,7 @@ galaxy_info:
   #  - stretch
   #  - wheezy
 
-  galaxy_tags: []
+  galaxy_tags:
     # List tags for your role here, one per line. A tag is
     # a keyword that describes and categorizes the role.
     # Users find roles by searching for tags. Be sure to
@@ -193,6 +193,8 @@ galaxy_info:
     #
     # NOTE: A tag is limited to a single word comprised of
     # alphanumeric characters. Maximum 20 tags per role.
+    apache
+    php
 
 dependencies: []
   # List your role dependencies here, one per line.

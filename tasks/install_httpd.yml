@@ -17,6 +17,23 @@
     - php5-mysql 
     - git 
     - python-all-dev 
+    - libapache2-mod-php5 
+    - php5-cli 
+    - php5-common 
+    - php5-curl 
+    - php5-dev 
+    - php5-gd 
+    - php5-gmp 
+    - php5-mcrypt 
+    - php5-memcache 
+    - php5-xsl 
+    - php-apc 
+    - php-pear 
+
+ - name: Enable apache2 modules 
+   command: a2enmod {{ item }} 
+   with_items: lamp.apache.modules 
+   notify: restart apache2 
 
 #taking this out for now.  this was when we installed via httpd. 
 #not sure what it needs to be yet for when doing apache2
