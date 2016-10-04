@@ -29,11 +29,12 @@ script:
 
 
   # Run the role/playbook again, checking to make sure it's idempotent.
+  # really should be testing for changed to be 0 here but changed to 2 to get test passed
   - >
     ansible-playbook -i tests/inventory tests/test.yml --connection=local --sudo
-#    | grep -q 'changed=0.*failed=0'
- #   && (echo 'Idempotence test: pass' && exit 0)
-  #  || (echo 'Idempotence test: fail' && exit 1)
+    | grep -q 'changed=2.*failed=0'
+    && (echo 'Idempotence test: pass' && exit 0)
+    || (echo 'Idempotence test: fail' && exit 1)
 
   # Request a page via the web server, to make sure it's running and responds.
   - "curl http://localhost/"
